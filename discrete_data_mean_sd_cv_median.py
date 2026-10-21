@@ -1,0 +1,19 @@
+import numpy as np
+x=np.array([11,13,18,20,21,27,30,32])
+f=np.array([7,12,18,27,20,14,9,4])
+N=np.sum(f)
+s1=np.sum(f*x)
+s2=np.mean(f*x*x)
+L=np.max(s1)
+S=np.min(x)
+Am=s1/N
+var=(s2/N)-(Am*Am)
+sd=np.sqrt(-var)
+cv=(sd/abs(Am))*100
+R=L-S
+co_ran=(L-S)/(S+L)
+print('mean',Am)
+print('variance:',var)
+print('Sd:',sd)
+print('cv:',cv)
+print('coe_ran:',co_ran)

@@ -1,0 +1,16 @@
+import numpy as np
+x=np.array([1,2,3,4,5])
+x1=np.arange(20,30)
+x2=np.random.uniform(10,20,size=10)
+h=np.concatenate((x,x1,x2))
+s=np.random.choice(x,size=2,replace= False )
+s1=np.random.choice(x1,size=5,replace= False )
+s2=np.random.choice(x2,size=5,replace=False )
+strta=np.concatenate((s,s1,s2))
+print('heterogeneous:',h)
+print('am hpopulation:',np.mean(h))
+print('strata:',x)
+print('strata:',x1)
+print('strata:',x2)
+print('strtified sample:',strta)
+
